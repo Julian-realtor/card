@@ -4,8 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Julian Acosta | Realtor® · Compass Miami</title>
-
-<!-- Open Graph / WhatsApp / iMessage -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://julian-realtor.github.io/card/">
 <meta property="og:title" content="Julian Acosta · Realtor® at Compass">
@@ -13,21 +11,14 @@
 <meta property="og:image" content="https://julian-realtor.github.io/card/og-preview.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
 <meta property="og:locale" content="en_US">
-
-<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Julian Acosta · Realtor® at Compass">
 <meta name="twitter:description" content="Real Estate Strategist in Coral Gables & Miami. 19+ years.">
-<meta name="twitter:image" content="https://julianmiamirealtor.com/og-preview.jpg">
-
-<!-- Apple -->
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-
+<meta name="twitter:image" content="https://julian-realtor.github.io/card/og-preview.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -131,9 +122,12 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   margin-top: 26px;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 .cta-row { display: flex; gap: 10px; flex-wrap: wrap; }
 .cta-btn {
+  display: inline-block;
   font-size: 9px;
   font-weight: 400;
   letter-spacing: 0.16em;
@@ -141,13 +135,15 @@ body {
   color: #666666;
   border: 0.5px solid #252525;
   border-radius: 2px;
-  padding: 7px 14px;
+  padding: 9px 16px;
   text-decoration: none;
+  cursor: pointer;
   transition: border-color 0.2s, color 0.2s, background 0.2s;
+  -webkit-tap-highlight-color: transparent;
 }
-.cta-btn:hover { border-color: #555; color: #FFF; }
+.cta-btn:hover, .cta-btn:active { border-color: #555; color: #FFF; }
 .cta-btn.primary { border-color: #FFFFFF; color: #FFFFFF; }
-.cta-btn.primary:hover { background: #FFFFFF; color: #0A0A0A; }
+.cta-btn.primary:hover, .cta-btn.primary:active { background: #FFFFFF; color: #0A0A0A; }
 .site-hint {
   font-size: 9px;
   color: #222222;
@@ -158,25 +154,27 @@ body {
   display: block;
   text-align: center;
   margin-top: 20px;
-  padding: 11px;
+  padding: 13px;
   border: 0.5px solid #1E1E1E;
   border-radius: 2px;
   font-size: 9px;
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #333333;
+  color: #444444;
   cursor: pointer;
   background: transparent;
   width: 100%;
   transition: border-color 0.2s, color 0.2s;
   font-family: 'Inter', sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
-.vcf-btn:hover { border-color: #3D3D3D; color: #777777; }
+.vcf-btn:hover, .vcf-btn:active { border-color: #3D3D3D; color: #888888; }
 @media (max-width: 480px) {
-  .card { padding: 32px 28px 28px; }
+  .card { padding: 32px 24px 28px; }
   .contact-grid { grid-template-columns: 1fr; gap: 14px; }
   .name { font-size: 24px; }
+  .cta-btn { padding: 10px 14px; }
 }
 </style>
 </head>
@@ -204,7 +202,7 @@ body {
   <div class="contact-grid">
     <div>
       <div class="contact-label">Mobile</div>
-      <a class="contact-value" href="tel:7864732565">786.473.2565</a>
+      <a class="contact-value" href="tel:+17864732565">786.473.2565</a>
     </div>
     <div>
       <div class="contact-label">Email</div>
@@ -212,7 +210,7 @@ body {
     </div>
     <div>
       <div class="contact-label">Website</div>
-      <a class="contact-value" href="https://julianmiamirealtor.com/" target="_blank">julianmiamirealtor.com</a>
+      <a class="contact-value" href="https://julianacostarealtor.com/" target="_blank">julianacostarealtor.com</a>
     </div>
     <div>
       <div class="contact-label">Market</div>
@@ -221,8 +219,8 @@ body {
   </div>
   <div class="card-bottom">
     <div class="cta-row">
-      <a class="cta-btn primary" href="https://calendar.app.google/sYa9Xp85FXnCpEJi8" target="_blank">Schedule a call</a>
-      <a class="cta-btn" href="https://www.google.com/search?kgmid=/g/11cp7jmsnt" target="_blank">Read reviews</a>
+      <a class="cta-btn primary" href="https://calendar.app.google/sYa9Xp85FXnCpEJi8" target="_blank" rel="noopener">Schedule a call</a>
+      <a class="cta-btn" href="https://www.google.com/search?kgmid=/g/11cp7jmsnt&q=Julian+Acosta+Compass" target="_blank" rel="noopener">Read reviews</a>
     </div>
     <span class="site-hint">compass.com</span>
   </div>
@@ -230,26 +228,25 @@ body {
 </div>
 <script>
 function saveContact() {
-  const vcard = [
-    'BEGIN:VCARD',
-    'VERSION:3.0',
-    'FN:Julian Acosta',
-    'N:Acosta;Julian;;;',
-    'ORG:Compass',
-    'TITLE:Realtor® · Real Estate Strategist',
-    'TEL;TYPE=CELL,VOICE:+17864732565',
-    'EMAIL;TYPE=WORK:julian.acosta@compass.com',
-    'URL:https://julianmiamirealtor.com',
-    'ADR;TYPE=WORK:;;Coral Gables;FL;;USA',
-    'NOTE:Real Estate Strategist at Compass. Coral Gables & Miami. 19+ years.',
-    'END:VCARD'
-  ].join('\r\n');
-  const blob = new Blob([vcard], { type: 'text/vcard' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
+  var vcard = 'BEGIN:VCARD
+VERSION:3.0
+FN:Julian Acosta
+N:Acosta;Julian;;;
+ORG:Compass
+TITLE:Realtor - Real Estate Strategist
+TEL;TYPE=CELL,VOICE:+17864732565
+EMAIL;TYPE=WORK:julian.acosta@compass.com
+URL:https://julianacostarealtor.com
+ADR;TYPE=WORK:;;Coral Gables;FL;;USA
+END:VCARD';
+  var blob = new Blob([vcard], {type: 'text/vcard;charset=utf-8'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
   a.href = url;
   a.download = 'julian-acosta-compass.vcf';
+  document.body.appendChild(a);
   a.click();
+  document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
 </script>
